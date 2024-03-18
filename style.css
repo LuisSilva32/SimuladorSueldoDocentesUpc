@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', serif;
+    scrollbar-width: none;
+    background-color: #50b1ba !important;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.logoContainer img {
+    margin-top: 20px;
+    width: 200px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: 600;
+    margin: 2rem 0;
+    font-family: "Proxima Nova", -apple-system, "Helvetica Neue", helvetica, roboto, arial, sans-serif;
+}
+
+.container h2 {
+    font-size: x-large;
+}
+
+.container h3 {
+    font-size: large;
+}
+
+.container label {
+    margin-bottom: 10px;
+}
+
+select {
+    width: 170px;
+    text-align: center;
+}
+
+
+.borde_tabla_grueso {
+    border: 4px #41a441 double;
+    font-size: 14px
+}
+
+.borde_tabla_fino {
+    border: 2px #50b1ba solid;
+    font-size: 12px;
+}
+
+.caja_invisible {
+    background-color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    border-style: none;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    text-align: center;
+    color: #000000
+}
+
+.button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.1em 2em;
+    border: #41a441 solid 0.15em;
+    border-radius: 0.25em;
+    color: #000000;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border 300ms, color 300ms;
+    user-select: none;
+}
+
+.button p {
+    z-index: 1;
+}
+
+.button:hover {
+    color: #ffffff;
+}
+
+.button:active {
+    border-color: teal;
+}
+
+.button::after,
+.button::before {
+    content: "";
+    position: absolute;
+    width: 9em;
+    aspect-ratio: 1;
+    background: #41a441;
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+    left: 0;
+    transform: translateX(-8em);
+}
+
+.button::after {
+    right: 0;
+    transform: translateX(8em);
+}
+
+.button:hover:before {
+    transform: translateX(-1em);
+}
+
+.button:hover:after {
+    transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+    background: teal;
+}
